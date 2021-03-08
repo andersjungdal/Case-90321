@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product_Service", "Product_Service\Product_Service.csproj", "{66D22113-7159-40AC-B1DA-6A3DEC8C358E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bakend", "Bakend", "{055FC64A-14FF-46C6-B8C5-049D16D2F72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{D807040F-F409-44C0-A5CA-DE8011D4BE79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66D22113-7159-40AC-B1DA-6A3DEC8C358E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D22113-7159-40AC-B1DA-6A3DEC8C358E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D22113-7159-40AC-B1DA-6A3DEC8C358E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D22113-7159-40AC-B1DA-6A3DEC8C358E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D807040F-F409-44C0-A5CA-DE8011D4BE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D807040F-F409-44C0-A5CA-DE8011D4BE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D807040F-F409-44C0-A5CA-DE8011D4BE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D807040F-F409-44C0-A5CA-DE8011D4BE79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66D22113-7159-40AC-B1DA-6A3DEC8C358E} = {055FC64A-14FF-46C6-B8C5-049D16D2F72B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E74759F-7073-4B04-ADC5-1AD44B77C9BE}
+	EndGlobalSection
+EndGlobal
