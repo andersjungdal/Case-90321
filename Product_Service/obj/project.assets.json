@@ -5857,11 +5857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\Product_Service\\Product_Service.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\case\\Product_Service\\Product_Service.csproj",
       "projectName": "Product_Service",
-      "projectPath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\Product_Service\\Product_Service.csproj",
+      "projectPath": "C:\\Users\\ander\\Desktop\\case\\Product_Service\\Product_Service.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\Product_Service\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\case\\Product_Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

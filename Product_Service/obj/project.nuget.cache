@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MFWSzB1wzHcM3ulndMkDfZbA6bRceoiEzJK1JguuV4ns05qdpHibeOPQApvIXSMqwXxojMKWWUYVIfY/a7Jkrg==",
+  "dgSpecHash": "mb6fUQsUleRnV7MRDy+HwE8L2qU69xCKk6NCowo5Y1/CrCMkdpvaorEGRYbDX0REVaGNg3PXV+0n1vHJMlhLsg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\Product_Service\\Product_Service.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\case\\Product_Service\\Product_Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

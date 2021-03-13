@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PkRkJAeIOZIHCPtMwh1/bhFlSgV+NYy653qqmjY9/IBd48Jb9D0nRmitR2ihdzPsr5U9LJjaIOv8URbzQNh/PA==",
+  "dgSpecHash": "Y6e9iHIO5e4C0YZbts5lzlTiVgysnw4Ow2XyA6O29Dm7U8kArE22nKafgPXuw46AiKD0N+z5qSh0Clmr1GBZyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\ApiGateway\\ApiGateway.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\case\\ApiGateway\\ApiGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.0\\microsoft.aspnetcore.jsonpatch.5.0.0.nupkg.sha512",

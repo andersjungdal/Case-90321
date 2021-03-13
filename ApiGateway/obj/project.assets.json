@@ -409,11 +409,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\ApiGateway\\ApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\case\\ApiGateway\\ApiGateway.csproj",
       "projectName": "ApiGateway",
-      "projectPath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\ApiGateway\\ApiGateway.csproj",
+      "projectPath": "C:\\Users\\ander\\Desktop\\case\\ApiGateway\\ApiGateway.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\Kode_2020\\Case-90321\\ApiGateway\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\case\\ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
