@@ -1,10 +1,14 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RabbitMQ.IoC;
 using Varelagerstyring.Db;
+using Varelagerstyring.Domain.Command;
+using Varelagerstyring.Domain.CommandHandlers;
 using Varelagerstyring.Interfaces;
 using Varelagerstyring.Providers;
 
@@ -28,6 +32,10 @@ namespace Varelagerstyring
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Varelagerstyring;Integrated Security=True"));
             services.AddScoped<IVarelagerstyringService, VarelagerstyringService>();
             services.AddAutoMapper(typeof(Startup));
+            services.AddMediatR(typeof(Startup));
+            services.AddRabbitMq();
+            services.AddTransient<IRequestHandler<CreatePostVarelagerstyringCommand, bool>, PostVarelagerstyringCommandHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

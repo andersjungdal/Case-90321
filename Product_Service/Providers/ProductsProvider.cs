@@ -8,7 +8,9 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
 using Product_Service.Db;
+using Product_Service.Domain.CommandHandlers;
 using Product_Service.Interfaces;
+using RabbitMQ.Bus.Bus.Interfaces;
 
 namespace Product_Service.Providers
 {
@@ -18,14 +20,16 @@ namespace Product_Service.Providers
         private readonly ILogger<ProductsProvider> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus _eventBus;
 
         public ProductsProvider(Db.ProductsDbContext dbContext, ILogger<ProductsProvider> logger, IMapper mapper,
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            _eventBus = eventBus;
         }
 
 
@@ -83,6 +87,10 @@ namespace Product_Service.Providers
                     await dbContext.Product.AddAsync(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newproduct}");
+
+                    var createPostCustomerCommand = new CreatePostProductServiceCommand(newproduct.Id, newproduct.Name, newproduct.Categories);
+                    await _eventBus.SendCommand(createPostCustomerCommand);
+
 
                     return (true, newproduct, null);
                 }

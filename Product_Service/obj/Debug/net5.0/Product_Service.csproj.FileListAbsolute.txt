@@ -114,3 +114,10 @@ C:\Users\ander\Desktop\case\Product_Service\obj\Debug\net5.0\Product_Service.dll
 C:\Users\ander\Desktop\case\Product_Service\obj\Debug\net5.0\ref\Product_Service.dll
 C:\Users\ander\Desktop\case\Product_Service\obj\Debug\net5.0\Product_Service.pdb
 C:\Users\ander\Desktop\case\Product_Service\obj\Debug\net5.0\Product_Service.genruntimeconfig.cache
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\MediatR.dll
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\RabbitMQ.IoC.dll
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\RabbitMQ.IoC.pdb
+C:\Users\ander\Desktop\case\Product_Service\bin\Debug\net5.0\RabbitMQ.Bus.pdb

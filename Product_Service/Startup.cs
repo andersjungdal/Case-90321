@@ -8,10 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Product_Service.Db;
 using Product_Service.Interfaces;
 using Product_Service.Providers;
 using Microsoft.EntityFrameworkCore;
+using Product_Service.Domain.Command;
+using Product_Service.Domain.CommandHandlers;
+using RabbitMQ.IoC;
 
 namespace Product_Service
 {
@@ -33,6 +37,10 @@ namespace Product_Service
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=case.90321.project;Integrated Security=True"));
             services.AddScoped<IProductsProvider, ProductsProvider>();
             services.AddAutoMapper(typeof(Startup));
+            services.AddMediatR(typeof(Startup));
+            services.AddRabbitMq();
+            services.AddTransient<IRequestHandler<CreatePostProductServiceCommand, bool>, PostProductServiceHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

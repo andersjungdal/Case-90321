@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Billedstyring.Domain.CommandHandlers;
 using Billedstyring.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using RabbitMQ.Bus.Bus.Interfaces;
 
 namespace Billedstyring.Providers
 {
@@ -16,14 +18,16 @@ namespace Billedstyring.Providers
         private readonly ILogger<BilledstyringService> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus _eventBus;
 
         public BilledstyringService(Db.BilledstyringDbContext dbContext, ILogger<BilledstyringService> logger, IMapper mapper,
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            _eventBus = eventBus;
         }
 
 
@@ -81,6 +85,10 @@ namespace Billedstyring.Providers
                     await dbContext.Billedstyring.AddAsync(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newproduct}");
+
+                    var createPostCustomerCommand = new CreatePostBilledstyringCommand(newproduct.Id, newproduct.Name, newproduct.Categories);
+                    await _eventBus.SendCommand(createPostCustomerCommand);
+
 
                     return (true, newproduct, null);
                 }

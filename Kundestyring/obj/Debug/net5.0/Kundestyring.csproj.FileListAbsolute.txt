@@ -56,3 +56,10 @@ C:\Users\ander\Desktop\case\Kundestyring\obj\Debug\net5.0\Kundestyring.dll
 C:\Users\ander\Desktop\case\Kundestyring\obj\Debug\net5.0\ref\Kundestyring.dll
 C:\Users\ander\Desktop\case\Kundestyring\obj\Debug\net5.0\Kundestyring.pdb
 C:\Users\ander\Desktop\case\Kundestyring\obj\Debug\net5.0\Kundestyring.genruntimeconfig.cache
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\MediatR.dll
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\RabbitMQ.IoC.dll
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\RabbitMQ.IoC.pdb
+C:\Users\ander\Desktop\case\Kundestyring\bin\Debug\net5.0\RabbitMQ.Bus.pdb

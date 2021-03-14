@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Kundestyring.Domain.CommandHandlers;
 using Kundestyring.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using RabbitMQ.Bus.Bus.Interfaces;
 
 namespace Kundestyring.Services
 {
@@ -16,14 +18,16 @@ namespace Kundestyring.Services
         private readonly ILogger<KundestyringService> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus _eventBus;
 
         public KundestyringService(Db.KundestyringDbContext dbContext, ILogger<KundestyringService> logger, IMapper mapper,
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            _eventBus = eventBus;
         }
 
 
@@ -81,6 +85,10 @@ namespace Kundestyring.Services
                     await dbContext.Kundestyring.AddAsync(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"Kundestyring created {newproduct}");
+
+                    var createPostCustomerCommand = new CreatePostKundestyringCommand(newproduct.Id, newproduct.Name, newproduct.Categories);
+                    await _eventBus.SendCommand(createPostCustomerCommand);
+
 
                     return (true, newproduct, null);
                 }

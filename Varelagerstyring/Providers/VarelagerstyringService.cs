@@ -6,6 +6,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using RabbitMQ.Bus.Bus.Interfaces;
+using Varelagerstyring.Domain.CommandHandlers;
 using Varelagerstyring.Interfaces;
 
 namespace Varelagerstyring.Providers
@@ -16,14 +18,16 @@ namespace Varelagerstyring.Providers
         private readonly ILogger<VarelagerstyringService> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus _eventBus;
 
         public VarelagerstyringService(Db.VarelagerstyringDbContext dbContext, ILogger<VarelagerstyringService> logger, IMapper mapper,
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            _eventBus = eventBus;
         }
 
         public async Task<(bool IsSuccess, IEnumerable<Models.Varelagerstyring> Varelagerstyring, string ErrorMessage)> GetVarelagerstyringsAsync()
@@ -82,6 +86,11 @@ namespace Varelagerstyring.Providers
                     await dbContext.Varelagerstyring.AddAsync(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newproduct}");
+
+                    var createPostCustomerCommand = new CreatePostVarelagerstyringCommand(newproduct.Id, newproduct.Name, newproduct.Categories);
+                    await _eventBus.SendCommand(createPostCustomerCommand);
+
+
 
                     return (true, newproduct, null);
                 }

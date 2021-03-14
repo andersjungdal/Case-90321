@@ -1,0 +1,12 @@
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.AssemblyInfo.cs
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\bin\Debug\net5.0\RabbitMQ.Bus.deps.json
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\bin\Debug\net5.0\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\bin\Debug\net5.0\ref\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\bin\Debug\net5.0\RabbitMQ.Bus.pdb
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\ref\RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\case\RabbitMQ.Bus\obj\Debug\net5.0\RabbitMQ.Bus.pdb
